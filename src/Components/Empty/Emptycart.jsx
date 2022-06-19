@@ -1,7 +1,9 @@
 import React from 'react'
 import "./cart.css"
+import { useNavigate } from 'react-router-dom'
 
 const Emptycart = () => {
+  const navigate=useNavigate()
   return (
     <div className='cart-container'>
        <h1 className='cart-heading'>
@@ -23,9 +25,9 @@ const Emptycart = () => {
             <div></div>
           </div>
           <div className='cart-buttonForShop'>
-            <button>SHOP WOMEN</button>
-            <button>SHOP MEN</button>
-            <button>SHOP KIDS</button>
+            <button onClick={()=>navigate("/womens")}>SHOP WOMEN</button>
+            <button onClick={()=>navigate("/mens")}>SHOP MEN</button>
+            <button onClick={()=>navigate("/kids")}>SHOP KIDS</button>
           </div>
        </div>
     </div>
