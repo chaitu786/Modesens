@@ -37,7 +37,7 @@ export default function BeautyProducts() {
 
   useEffect(()=>{
     setSearchParams({type:filterData})
-    let mainParams={type:SearchParams.getAll("type")}
+    let mainParams={type:SearchParams}
     dispatch(getData(mainParams))
   },[filterData,SearchParams,dispatch,setSearchParams])
   return (
