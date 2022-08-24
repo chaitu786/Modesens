@@ -21,7 +21,9 @@ export const getData=(payload,page_no)=>(dispatch)=>{
         params:{...payload}
     })
     .then((res)=>{
+        console.log(res.data)
         dispatch(getDataSuccess(res.data))
+        
     })
 }
 // ..................................................................//
