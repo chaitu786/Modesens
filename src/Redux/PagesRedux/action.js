@@ -16,7 +16,7 @@ export const getDataSuccess=(data)=>(
 
 export const getData=(payload,page_no)=>(dispatch)=>{
     axios({
-        url:"https://modesens-clone-web16.herokuapp.com/modesens/beauty",
+        url:"https://modesens-clone-web16.herokuapp.com/beauty",
         method:"GET",
         params:{...payload}
     })
