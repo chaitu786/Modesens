@@ -30,13 +30,12 @@ export default function BeautyProducts() {
 
   const handleFilter=(value)=>{
     setFilterData(value)
-    // console.log(filterData);
-    console.log(value);
   }
   
 
   useEffect(()=>{
     setSearchParams({type:filterData})
+    console.log(SearchParams);
     let mainParams={type:SearchParams}
     dispatch(getData(mainParams))
   },[filterData,SearchParams,dispatch,setSearchParams])

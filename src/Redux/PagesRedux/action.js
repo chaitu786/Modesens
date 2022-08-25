@@ -15,13 +15,13 @@ export const getDataSuccess=(data)=>(
 )
 
 export const getData=(payload,page_no)=>(dispatch)=>{
+    console.log(payload.type);
     axios({
         url:"https://modesens-clone-web16.herokuapp.com/modesens/beauty",
         method:"GET",
-        params:{...payload}
     })
     .then((res)=>{
-        console.log(res.data)
+        console.log(res)
         dispatch(getDataSuccess(res.data))
         
     })
